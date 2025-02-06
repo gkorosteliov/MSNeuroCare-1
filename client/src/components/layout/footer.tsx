@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-50 border-t">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="space-y-8">
           <div>
             <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Quick Links</h3>
             <ul className="mt-4 space-y-2">
@@ -24,7 +24,12 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Professional</h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <a href="https://www.linkedin.com/in/anastasia-korosteliov/" target="_blank" rel="noopener noreferrer" className="text-base text-gray-500 hover:text-gray-900">
+                <a
+                  href="https://www.linkedin.com/in/anastasia-korosteliov/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base text-gray-500 hover:text-gray-900"
+                >
                   LinkedIn Profile
                 </a>
               </li>
