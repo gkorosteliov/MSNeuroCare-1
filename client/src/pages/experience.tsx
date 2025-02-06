@@ -4,27 +4,27 @@ import { Award, GraduationCap, Building2 } from "lucide-react";
 export default function Experience() {
   const education = [
     {
-      degree: "Master of Science in Nursing",
-      institution: "Johns Hopkins University",
-      year: "2015"
+      degree: "Master of Science - MS, Nursing",
+      institution: "Boston College",
+      year: "2019"
     },
     {
-      degree: "Bachelor of Science in Nursing",
-      institution: "University of Pennsylvania",
-      year: "2012"
+      degree: "Bachelor of Science - BS, Nursing",
+      institution: "Endicott College",
+      year: "2016"
     }
   ];
 
   const certifications = [
     "Multiple Sclerosis Certified Nurse (MSCN)",
-    "Advanced Practice Registered Nurse (APRN)",
-    "Board Certified Adult Nurse Practitioner"
+    "Board Certified Adult-Gerontology Primary Care Nurse Practitioner (AGPCNP-BC)",
+    "Registered Nurse (RN)"
   ];
 
   const affiliations = [
-    "American Academy of Neurology",
-    "International Organization of Multiple Sclerosis Nurses",
-    "American Association of Nurse Practitioners"
+    "International Organization of Multiple Sclerosis Nurses (IOMSN)",
+    "American Academy of Neurology (AAN)",
+    "American Association of Nurse Practitioners (AANP)"
   ];
 
   return (
