@@ -1,22 +1,17 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Stethoscope, Brain, Video, ClipboardList, Users, HeartPulse } from "lucide-react";
+import { Brain, ClipboardList, Users, HeartPulse, Stethoscope } from "lucide-react";
 
 export default function Services() {
   const services = [
     {
-      title: "Patient Education",
-      description: "Comprehensive education about MS diagnosis, treatment options, and management strategies.",
+      title: "MS Patient Care",
+      description: "Comprehensive care and management of Multiple Sclerosis, including treatment planning and symptom management.",
       icon: Brain
     },
     {
       title: "Treatment Planning",
-      description: "Personalized treatment plans incorporating the latest evidence-based approaches.",
+      description: "Evidence-based treatment approaches tailored to each patient's specific MS presentation and needs.",
       icon: ClipboardList
-    },
-    {
-      title: "Telehealth Consultations",
-      description: "Remote consultations for ongoing care and support, making healthcare more accessible.",
-      icon: Video
     },
     {
       title: "Symptom Management",
@@ -25,13 +20,28 @@ export default function Services() {
     },
     {
       title: "Care Coordination",
-      description: "Coordination with other healthcare providers to ensure comprehensive care.",
+      description: "Seamless coordination with neurologists and other healthcare providers for comprehensive care.",
       icon: Users
     },
     {
       title: "Regular Assessments",
-      description: "Ongoing monitoring and assessment of disease progression and treatment effectiveness.",
+      description: "Ongoing monitoring of disease progression and treatment effectiveness.",
       icon: Stethoscope
+    }
+  ];
+
+  const clinicExperience = [
+    {
+      role: "Lead MS Nurse Practitioner",
+      clinic: "Boston Medical Center MS Center",
+      duration: "2019-Present",
+      description: "Managing complex MS cases, coordinating with multidisciplinary teams, and implementing treatment protocols."
+    },
+    {
+      role: "MS Clinical Nurse Specialist",
+      clinic: "Partners MS Center",
+      duration: "2016-2019",
+      description: "Specialized in MS patient care, treatment administration, and patient education."
     }
   ];
 
@@ -62,13 +72,20 @@ export default function Services() {
         </div>
 
         <Card className="mt-12">
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Accepting New Patients</h2>
-            <p className="text-gray-600">
-              I am currently accepting new patients for both in-person and telehealth consultations. 
-              Referrals from healthcare providers are welcome. Please contact my office to schedule 
-              an appointment or discuss your specific needs.
-            </p>
+          <CardHeader>
+            <CardTitle className="text-2xl">Clinical Experience</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-8">
+              {clinicExperience.map((exp, index) => (
+                <div key={index} className="border-l-2 border-primary pl-4">
+                  <h3 className="font-semibold text-xl text-gray-900">{exp.role}</h3>
+                  <p className="text-primary font-medium">{exp.clinic}</p>
+                  <p className="text-sm text-gray-500 mb-2">{exp.duration}</p>
+                  <p className="text-gray-600">{exp.description}</p>
+                </div>
+              ))}
+            </div>
           </CardContent>
         </Card>
       </div>
