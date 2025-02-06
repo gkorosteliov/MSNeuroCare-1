@@ -16,7 +16,6 @@ const navigation = [
   { name: 'Experience', href: '/experience' },
   { name: 'Publications', href: '/publications' },
   { name: 'Resources', href: '/resources' },
-  { name: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {

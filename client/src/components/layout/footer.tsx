@@ -4,14 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-50 border-t">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Contact</h3>
-            <div className="mt-4 space-y-2">
-              <p className="text-base text-gray-500">Email: contact@example.com</p>
-              <p className="text-base text-gray-500">Phone: (555) 123-4567</p>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Quick Links</h3>
             <ul className="mt-4 space-y-2">
@@ -21,8 +14,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-base text-gray-500 hover:text-gray-900">
-                  Get in Touch
+                <Link href="/publications" className="text-base text-gray-500 hover:text-gray-900">
+                  Publications
                 </Link>
               </li>
             </ul>
