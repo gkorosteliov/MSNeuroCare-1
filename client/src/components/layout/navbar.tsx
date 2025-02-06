@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -27,32 +27,31 @@ export default function Navbar() {
     <nav className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <div className="flex">
-            <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-xl font-bold text-primary">Dr. Korosteliov</span>
+          <div className="flex items-center">
+            <Link href="/" className="flex-shrink-0 flex items-center mr-8">
+              <span className="text-xl font-bold text-primary whitespace-nowrap">Anastasia Korosteliov</span>
             </Link>
-          </div>
-
-          {/* Desktop navigation */}
-          <div className="hidden sm:flex sm:space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={cn(
-                  "inline-flex items-center px-1 pt-1 text-sm font-medium",
-                  location === item.href
-                    ? "text-primary border-b-2 border-primary"
-                    : "text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                )}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {/* Desktop navigation */}
+            <div className="hidden sm:flex sm:space-x-8">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    "inline-flex items-center px-1 pt-1 text-sm font-medium",
+                    location === item.href
+                      ? "text-primary border-b-2 border-primary"
+                      : "text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                  )}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="sm:hidden">
+          <div className="sm:hidden flex items-center">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -61,7 +60,7 @@ export default function Navbar() {
                 </Button>
               </SheetTrigger>
               <SheetContent>
-                <div className="flex flex-col space-y-4">
+                <div className="flex flex-col space-y-4 mt-4">
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
